@@ -201,6 +201,27 @@
       Help
     </div>
   </div>
+<script>
+const searchBox = document.querySelector('.search input');
+const cards = document.querySelectorAll('.card');
 
+searchBox.addEventListener('input', function () {
+
+  const searchText = this.value.toLowerCase().trim();
+
+  cards.forEach(function(card) {
+
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(searchText)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+
+  });
+
+});
+</script>
 </body>
 </html>
