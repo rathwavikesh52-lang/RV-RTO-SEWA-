@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RTO Fee Calculator - RV RTO SEWA</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f4f6f8;
+  color:#222;
+}
+
+.header{
+  background:#0757a0;
+  color:white;
+  padding:22px 15px;
+  text-align:center;
+}
+
+.container{
+  padding:18px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:7px;
+  font-weight:bold;
+}
+
+select{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+  background:white;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:0;
+  border-radius:10px;
+  background:#0757a0;
+  color:white;
+  font-size:17px;
+  margin-top:20px;
+}
+
+.result{
+  margin-top:20px;
+  padding:18px;
+  background:#e8f1ff;
+  border-radius:12px;
+  text-align:center;
+  display:none;
+}
+
+.result h2{
+  color:#0757a0;
+}
+
+.note{
+  margin-top:15px;
+  padding:14px;
+  background:#fff3cd;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.back{
+  background:#555;
+  margin-top:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>💰 RTO Fee Calculator</h1>
+  <p>RTO Fee નો અંદાજ</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<label>🚗 Vehicle Type પસંદ કરો</label>
+
+<select id="vehicle">
+  <option value="">-- પસંદ કરો --</option>
+  <option value="two">Two Wheeler</option>
+  <option value="car">Car / LMV</option>
+  <option value="transport">Transport Vehicle</option>
+</select>
+
+<label>🔄 Service પસંદ કરો</label>
+
+<select id="service">
+  <option value="">-- પસંદ કરો --</option>
+  <option value="transfer">Ownership Transfer</option>
+  <option value="duplicate">Duplicate RC</option>
+  <option value="address">Address Change</option>
+</select>
+
+<button onclick="calculateFee()">
+  💰 Fee Calculate કરો
+</button>
+
+<div class="result" id="result">
+  <h2>અંદાજિત Fee</h2>
+  <p id="amount"></p>
+</div>
+
+<div class="note">
+⚠️ આ માત્ર અંદાજિત calculator છે. Actual RTO fee વાહન, રાજ્ય, service અને અન્ય charges પ્રમાણે બદલાઈ શકે છે. અરજી કરતા પહેલાં Official Portal પર ચકાસો.
+</div>
+
+</div>
+
+<button class="back" onclick="history.back()">
+← પાછા જાઓ
+</button>
+
+</div>
+
+<script>
+
+function calculateFee(){
+
+  let vehicle = document.getElementById("vehicle").value;
+  let service = document.getElementById("service").value;
+
+  if(vehicle === "" || service === ""){
+    alert("કૃપા કરીને બંને વિકલ્પ પસંદ કરો.");
+    return;
+  }
+
+  let fee = 0;
+
+  if(service === "transfer"){
+
+    if(vehicle === "two"){
+      fee = 150;
+    }
+
+    else if(vehicle === "car"){
+      fee = 300;
+    }
+
+    else{
+      fee = 500;
+    }
+
+  }
+
+  else if(service === "duplicate"){
+
+    if(vehicle === "two"){
+      fee = 150;
+    }
+
+    else if(vehicle === "car"){
+      fee = 300;
+    }
+
+    else{
+      fee = 500;
+    }
+
+  }
+
+  else if(service === "address"){
+
+    if(vehicle === "two"){
+      fee = 200;
+    }
+
+    else if(vehicle === "car"){
+      fee = 300;
+    }
+
+    else{
+      fee = 500;
+    }
+
+  }
+
+  document.getElementById("amount").innerHTML =
+    "અંદાજિત Fee: <strong>₹" + fee + "</strong>";
+
+  document.getElementById("result").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
