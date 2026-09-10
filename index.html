@@ -1,1 +1,206 @@
 
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RV RTO SEWA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    .header {
+      background: #0757a0;
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .header p {
+      font-size: 15px;
+    }
+
+    .search {
+      margin: 18px 15px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 5px 15px 25px;
+    }
+
+    .title {
+      font-size: 21px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px 10px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      font-size: 15px;
+    }
+
+    .welcome {
+      background: white;
+      padding: 18px;
+      margin-top: 18px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    }
+
+    .welcome h2 {
+      margin-bottom: 8px;
+      color: #0757a0;
+    }
+
+    .bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 5px;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+
+    .bottom div {
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .bottom span {
+      display: block;
+      font-size: 23px;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>🚗 RV RTO SEWA</h1>
+    <p>તમારા વાહનના કામ માટે એક સરળ સેવા</p>
+  </header>
+
+  <div class="search">
+    <input type="text" placeholder="🔍 Service શોધો...">
+  </div>
+
+  <main class="container">
+
+    <div class="title">મુખ્ય સેવાઓ</div>
+
+    <div class="grid">
+
+      <div class="card" onclick="alert('Vehicle Service')">
+        <div class="icon">🚗</div>
+        <h3>Vehicle Service</h3>
+      </div>
+
+      <div class="card" onclick="alert('Ownership Transfer')">
+        <div class="icon">🔄</div>
+        <h3>Ownership Transfer</h3>
+      </div>
+
+      <div class="card" onclick="alert('Driving Licence')">
+        <div class="icon">🪪</div>
+        <h3>Driving Licence</h3>
+      </div>
+
+      <div class="card" onclick="alert('Insurance')">
+        <div class="icon">🛡️</div>
+        <h3>Insurance</h3>
+      </div>
+
+      <div class="card" onclick="alert('Documents')">
+        <div class="icon">📄</div>
+        <h3>Documents</h3>
+      </div>
+
+      <div class="card" onclick="alert('RTO Fee Calculator')">
+        <div class="icon">💰</div>
+        <h3>RTO Fee Calculator</h3>
+      </div>
+
+    </div>
+
+    <div class="welcome">
+      <h2>નમસ્કાર 👋</h2>
+      <p>
+        RV RTO SEWAમાં આપનું સ્વાગત છે.
+        અહીં તમને વાહન અને RTO સંબંધિત વિવિધ સેવાઓની માહિતી સરળતાથી મળશે.
+      </p>
+    </div>
+
+  </main>
+
+  <div class="bottom">
+    <div>
+      <span>🏠</span>
+      Home
+    </div>
+
+    <div>
+      <span>🚗</span>
+      Vehicle
+    </div>
+
+    <div>
+      <span>📄</span>
+      Services
+    </div>
+
+    <div>
+      <span>☎️</span>
+      Help
+    </div>
+  </div>
+
+</body>
+</html>
